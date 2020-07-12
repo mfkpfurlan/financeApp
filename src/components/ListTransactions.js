@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Table, Container } from 'react-bootstrap';
 import MockData from "../mocks/mockData.json"
 
 function ListTransactions() {
 
-    function ListData() {
-        return 0;
-    }
+    // const [listData, setListData] = useState(MockData);
+
+    // useEffect(() => {
+
+    // })
+
+    // function updateList() {
+    //     return 0;
+    // }
 
     return (
         <Container>
@@ -25,7 +31,7 @@ function ListTransactions() {
                 <tbody>
                     {MockData.map((data, index) => {
                         return (
-                            <tr>
+                            <tr key={index}>
                                 <td>{data.operation}</td>
                                 <td>{data.source}</td>
                                 <td>{data.destination}</td>
