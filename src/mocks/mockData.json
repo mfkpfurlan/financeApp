@@ -1,0 +1,47 @@
+[
+    {
+        "operation": "Income",
+        "source": "CI&T",
+        "destination": "Nu",
+        "date": "10/10/20",
+        "ammount": "1337",
+        "category": "salary",
+        "description": "something"
+    },
+    {
+        "operation": "Expense",
+        "source": "Nu",
+        "destination": "Groceries",
+        "date": "11/10/20",
+        "ammount": "337",
+        "category": "groceries",
+        "description": "something"
+    },
+    {
+        "operation": "Transfer",
+        "source": "BB",
+        "destination": "Nu",
+        "date": "12/10/20",
+        "ammount": "100",
+        "category": "laundry",
+        "description": "something"
+    },
+    {
+        "operation": "Income",
+        "source": "CI&T",
+        "destination": "Nu",
+        "date": "10/10/20",
+        "ammount": "1337",
+        "category": "salary",
+        "description": "something"
+    },
+    {
+        "operation": "Income",
+        "source": "CI&T",
+        "destination": "Nu",
+        "date": "10/10/20",
+        "ammount": "1337",
+        "category": "salary",
+        "description": "something"
+    }
+]
