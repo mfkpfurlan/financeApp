@@ -12,8 +12,6 @@ function FormJson() {
     const [category, setCategory] = useState("");
     const [description, setDescription] = useState("");
 
-    const fs = require('browserify-fs');
-
     function handleSubmit(e) {
         let transaction =
         {
@@ -28,7 +26,6 @@ function FormJson() {
 
         MockData.push(transaction);
         console.log(MockData);
-        fs.writeFile("a.json", MockData);
         e.preventDefault();
     };
 
