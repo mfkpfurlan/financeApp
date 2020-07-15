@@ -43,5 +43,32 @@
         "ammount": "1337",
         "category": "salary",
         "description": "something"
+    },
+    {
+        "operation": "Expense",
+        "source": "Nu",
+        "destination": "Groceries",
+        "date": "11/10/20",
+        "ammount": "337",
+        "category": "Groceries",
+        "description": "something"
+    },
+    {
+        "operation": "Expense",
+        "source": "Nu",
+        "destination": "Luxury",
+        "date": "11/10/20",
+        "ammount": "228",
+        "category": "Luxury",
+        "description": "something"
+    },
+    {
+        "operation": "Expense",
+        "source": "Nu",
+        "destination": "Health",
+        "date": "11/10/20",
+        "ammount": "579",
+        "category": "Pharmacy",
+        "description": "something"
     }
 ]

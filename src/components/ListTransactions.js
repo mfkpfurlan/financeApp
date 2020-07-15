@@ -6,14 +6,6 @@ function ListTransactions(props) {
 
     const [listData, setListData] = useState(props.data);
 
-    // useEffect(() => {
-    //     setListData([...listData, listData]);
-    // }, data)
-
-    // function updateList() {
-    //     return 0;
-    // }
-
     return (
         <Container>
             <Table striped bordered hover size="sm" variant="dark">
