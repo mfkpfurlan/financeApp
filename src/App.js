@@ -4,6 +4,7 @@ import Header from './components/Header';
 import ListTransactions from './components/ListTransactions';
 import FormJson from './components/Form';
 import Balance from './components/Balance';
+import Dashboard from './components/Dashboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import MockData from "./mocks/mockData.json"
@@ -21,6 +22,7 @@ function App() {
       <ListTransactions data={listData} />
       <FormJson liftData={getLiftedData} />
       <Balance data={listData} />
+      <Dashboard data={listData} />
     </Container>
   );
 }
