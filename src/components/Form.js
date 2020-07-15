@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form, Col, Button, Container } from 'react-bootstrap';
 import MockData from "../mocks/mockData.json"
 
-function FormJson() {
+function FormJson(props) {
 
     const [operation, setOperation] = useState("");
     const [source, setSource] = useState("");
@@ -25,7 +25,7 @@ function FormJson() {
         };
 
         MockData.push(transaction);
-        console.log(MockData);
+        props.liftData(MockData);
         e.preventDefault();
     };
 

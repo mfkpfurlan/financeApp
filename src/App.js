@@ -10,11 +10,15 @@ import MockData from "./mocks/mockData.json"
 function App() {
   const [listData, setListData] = useState(MockData);
 
+  const getLiftedData = (data) => {
+    setListData([...listData, data]);
+  }
+
   return (
     <Container>
       <Header />
       <ListTransactions data={listData} />
-      <FormJson />
+      <FormJson liftData={getLiftedData} />
     </Container>
   );
 }

@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Table, Container } from 'react-bootstrap';
 import MockData from "../mocks/mockData.json"
 
-function ListTransactions() {
+function ListTransactions(props) {
 
-    const [listData, setListData] = useState(MockData);
-    // const [listData, setListData] = useState(data);
+    const [listData, setListData] = useState(props.data);
 
     // useEffect(() => {
     //     setListData([...listData, listData]);
