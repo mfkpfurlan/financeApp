@@ -27,12 +27,12 @@
         "description": "something"
     },
     {
-        "operation": "Income",
-        "source": "CI&T",
-        "destination": "Nu",
-        "date": "10/10/20",
-        "ammount": "1337",
-        "category": "salary",
+        "operation": "Transfer",
+        "source": "Nu",
+        "destination": "BB",
+        "date": "15/10/20",
+        "ammount": "300",
+        "category": "laundry",
         "description": "something"
     },
     {

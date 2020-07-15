@@ -42,7 +42,9 @@ function FormJson(props) {
                             onChange={(e) => setOperation(e.target.value)}
                         >
                             <option>Choose...</option>
-                            <option>...</option>
+                            <option>Income</option>
+                            <option>Transfer</option>
+                            <option>Expense</option>
                         </Form.Control>
                     </Form.Group>
                 </Form.Row>
@@ -56,7 +58,9 @@ function FormJson(props) {
                             onChange={(e) => setSource(e.target.value)}
                         >
                             <option>Choose...</option>
-                            <option>...</option>
+                            <option>Nu</option>
+                            <option>BB</option>
+                            <option>CIT</option>
                         </Form.Control>
                     </Form.Group>
                     <Form.Group as={Col} controlId="destination">
@@ -67,7 +71,10 @@ function FormJson(props) {
                             onChange={(e) => setDestination(e.target.value)}
                         >
                             <option>Choose...</option>
-                            <option>...</option>
+                            <option>Nu</option>
+                            <option>BB</option>
+                            <option>Groceries</option>
+                            <option>Laundry</option>
                         </Form.Control>
                     </Form.Group>
                 </Form.Row>
@@ -97,7 +104,11 @@ function FormJson(props) {
                             onChange={(e) => setCategory(e.target.value)}
                         >
                             <option>Choose...</option>
-                            <option>...</option>
+                            <option>Groceries</option>
+                            <option>Laundry</option>
+                            <option>Pharmacy</option>
+                            <option>Health</option>
+                            <option>Luxury</option>
                         </Form.Control>
                     </Form.Group>
                 </Form.Row>

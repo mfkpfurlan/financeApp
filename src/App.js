@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import Header from './components/Header';
 import ListTransactions from './components/ListTransactions';
 import FormJson from './components/Form';
+import Balance from './components/Balance';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import MockData from "./mocks/mockData.json"
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <ListTransactions data={listData} />
       <FormJson liftData={getLiftedData} />
+      <Balance data={listData} />
     </Container>
   );
 }
