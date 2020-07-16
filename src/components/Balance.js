@@ -46,11 +46,6 @@ function Balance(props) {
                         <Card.Title>Nubank</Card.Title>
                         <Card.Text>R${balNu}</Card.Text>
                     </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                    </ListGroup>
                     <Card.Body>
                         <Card.Link href="#">SOME LINK</Card.Link>
                         <Card.Link href="#">SOME LINK</Card.Link>
@@ -63,11 +58,6 @@ function Balance(props) {
                         <Card.Title>Banco do Brasil</Card.Title>
                         <Card.Text>R${balBb}</Card.Text>
                     </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                    </ListGroup>
                     <Card.Body>
                         <Card.Link href="#">SOME LINK</Card.Link>
                         <Card.Link href="#">SOME LINK</Card.Link>
@@ -80,11 +70,6 @@ function Balance(props) {
                         <Card.Title>ACC NAME</Card.Title>
                         <Card.Text>ACC BALANCE</Card.Text>
                     </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                    </ListGroup>
                     <Card.Body>
                         <Card.Link href="#">SOME LINK</Card.Link>
                         <Card.Link href="#">SOME LINK</Card.Link>
@@ -97,11 +82,6 @@ function Balance(props) {
                         <Card.Title>ACC NAME</Card.Title>
                         <Card.Text>ACC BALANCE</Card.Text>
                     </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                    </ListGroup>
                     <Card.Body>
                         <Card.Link href="#">SOME LINK</Card.Link>
                         <Card.Link href="#">SOME LINK</Card.Link>
@@ -114,11 +94,6 @@ function Balance(props) {
                         <Card.Title>ACC NAME</Card.Title>
                         <Card.Text>ACC BALANCE</Card.Text>
                     </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                        <ListGroupItem>SOMETHING</ListGroupItem>
-                    </ListGroup>
                     <Card.Body>
                         <Card.Link href="#">SOME LINK</Card.Link>
                         <Card.Link href="#">SOME LINK</Card.Link>

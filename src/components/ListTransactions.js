@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Container } from 'react-bootstrap';
-import MockData from "../mocks/mockData.json"
+import MockData from "../mocks/mockData.json";
 
 function ListTransactions(props) {
 

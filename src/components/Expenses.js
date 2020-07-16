@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Table } from 'react-bootstrap';
 import { Doughnut } from 'react-chartjs-2';
 
-function Dashboard(props) {
+function Expenses(props) {
 
     const [listData, setListData] = useState(props.data);
 
@@ -65,23 +65,6 @@ function Dashboard(props) {
         }]
     }
 
-    let chartData2 = {
-        labels: ['Income', 'Expense'],
-        datasets: [{
-            // label: '# of Votes',
-            data: [totalIncome, totalExpense],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)'
-            ],
-            borderColor: [
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 99, 132, 1)'
-            ],
-            borderWidth: 1
-        }]
-    }
-
     let chartOptions = {
         scales: {
             yAxes: [{
@@ -94,28 +77,14 @@ function Dashboard(props) {
 
     return (
         <Container>
-            <Table>
-                <tbody>
-                    <tr>
-                        <Doughnut
-                            data={chartData}
-                            width={50}
-                            height={50}
-                            options={chartOptions}
-                        />
-                    </tr>
-                    <tr>
-                        <Doughnut
-                            data={chartData2}
-                            width={50}
-                            height={50}
-                            options={chartOptions}
-                        />
-                    </tr>
-                </tbody>
-            </Table>
+            <Doughnut
+                data={chartData}
+                width={50}
+                height={50}
+                options={chartOptions}
+            />
         </Container>
     );
 }
 
-export default Dashboard;
+export default Expenses;
