@@ -5,18 +5,26 @@ import App from './App';
 import Header from './components/Header';
 import Home from './components/Home';
 import Accounts from './components/Accounts';
+import Expenses from './components/Expenses';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
+    {/* DATA WORKS */}
+    <App />
+    {/* DATA WORKS */}
+
+    {/* WORKS WITH ROUTER */}
+    {/* <Header />
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact={true} component={App} />
+        <Route path="/" exact={true} component={Home} />
         <Route path="/accounts" component={Accounts} />
+        <Route path="/expenses" component={Expenses} />
       </Switch>
-    </ BrowserRouter>
+    </ BrowserRouter> */}
+    {/* WORKS WITH ROUTER */}
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { Container, Card, CardGroup, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Container, Button, Card, CardGroup, ListGroup, ListGroupItem } from 'react-bootstrap';
 
-function Balance(props) {
+function AccountsFilter(props) {
 
     const [listData, setListData] = useState(props.data);
 
     let balNu = 0;
     let balBb = 0;
+    let totalBalance = 0;
 
     const balanceAccounts = listData.map((row, index) => {
         if (row.operation === "Income") {
@@ -39,7 +40,7 @@ function Balance(props) {
     return (
         <Container>
             <CardGroup>
-
+                <Button variant="primary" size="lg" block>{totalBalance}</Button>
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src="" />
                     <Card.Body>
@@ -105,4 +106,4 @@ function Balance(props) {
     )
 }
 
-export default Balance;
+export default AccountsFilter;

@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Table } from 'react-bootstrap';
+import { Container, Button, Form, Col } from 'react-bootstrap';
+import ListTransactions from './ListTransactions'
 import { Doughnut } from 'react-chartjs-2';
+import MockData from "../mocks/mockData.json"
 
 function Expenses(props) {
 
+    // const [listData, setListData] = useState(MockData);
     const [listData, setListData] = useState(props.data);
 
     let totalExpense = 0;
@@ -77,13 +80,48 @@ function Expenses(props) {
 
     return (
         <Container>
+
+            <Form>
+
+                <Form.Row>
+                    <Form.Group as={Col} controlId="expenseAccount">
+                        <Form.Label>Accounts</Form.Label>
+                        <Form.Control as="select" defaultValue="Choose...">
+                            <option>Choose...</option>
+                            <option>Nu</option>
+                        </Form.Control>
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId="startDate">
+                        <Form.Label>date</Form.Label>
+                        <Form.Control
+                            type="date"
+                        >
+                        </Form.Control>
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId="endDate">
+                        <Form.Label>date</Form.Label>
+                        <Form.Control
+                            type="date"
+                        >
+                        </Form.Control>
+                    </Form.Group>
+                </Form.Row>
+
+                <Button variant="primary" type="submit">Submit</Button>
+            </Form>
+
             <Doughnut
                 data={chartData}
                 width={50}
                 height={50}
                 options={chartOptions}
             />
-        </Container>
+
+            <ListTransactions />
+
+        </Container >
     );
 }
 

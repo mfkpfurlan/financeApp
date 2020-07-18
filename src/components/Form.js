@@ -4,6 +4,8 @@ import MockData from "../mocks/mockData.json"
 
 function FormJson(props) {
 
+    const [listData, setListData] = useState(props.data);
+
     const [operation, setOperation] = useState("");
     const [source, setSource] = useState("");
     const [destination, setDestination] = useState("");
@@ -24,8 +26,9 @@ function FormJson(props) {
             "description": description
         };
 
-        MockData.push(transaction);
-        props.liftData(MockData);
+        // MockData.push(transaction);
+        listData.push(transaction);
+        props.liftData(listData);
         e.preventDefault();
     };
 

@@ -4,7 +4,7 @@ import MockData from "../mocks/mockData.json";
 
 function ListTransactions(props) {
 
-    const [listData, setListData] = useState(props.data);
+    const [listData, setListData] = useState(MockData);
 
     return (
         <Container>

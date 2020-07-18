@@ -4,8 +4,8 @@ import FormJson from './Form';
 import { Bar } from 'react-chartjs-2';
 import MockData from "../mocks/mockData.json";
 
-function Home() {
-    const [listData, setListData] = useState(MockData);
+function Home(props) {
+    const [listData, setListData] = useState(props.data);
 
     const getLiftedData = (data) => {
         setListData([...listData, data]);
@@ -130,7 +130,7 @@ function Home() {
                 height={50}
                 options={chartOptions}
             />
-            <FormJson liftData={getLiftedData} />
+            <FormJson liftData={getLiftedData} data={listData} />
         </Container>
     );
 }
