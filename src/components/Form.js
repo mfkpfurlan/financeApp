@@ -26,7 +26,6 @@ function FormJson(props) {
             "description": description
         };
 
-        // MockData.push(transaction);
         listData.push(transaction);
         props.liftData(listData);
         e.preventDefault();

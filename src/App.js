@@ -28,10 +28,11 @@ function App() {
   return (
     <Container>
       {/* <Header /> */}
-      <ListTransactions data={listData} />
+      {/* <ListTransactions data={listData} /> */}
       {/* <FormJson /> */}
-      <FormJson liftData={getLiftedData} data={listData} />
-      <AccountsFilter data={listData} />
+      {/* <FormJson liftData={getLiftedData} data={listData} /> */}
+      <Accounts data={listData} />
+      {/* <AccountsFilter data={listData} /> */}
       <Expenses data={listData} />
     </Container>
   );

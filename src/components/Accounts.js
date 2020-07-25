@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import AccountsFilter from './AccountsFilter';
-import ListTransactions from './ListTransactions'
-import MockData from "../mocks/mockData.json"
 
-function Accounts() {
-    const [listData, setListData] = useState(MockData);
+function Accounts(props) {
+    const [listData, setListData] = useState(props.data);
+
+    const [filter, setFilter] = useState("All");
 
     return (
         <Container>
-            <AccountsFilter data={listData} />
-            <ListTransactions />
+            <AccountsFilter data={listData} filter={filter} />
         </Container>
     );
 }

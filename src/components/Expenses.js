@@ -6,7 +6,6 @@ import MockData from "../mocks/mockData.json"
 
 function Expenses(props) {
 
-    // const [listData, setListData] = useState(MockData);
     const [listData, setListData] = useState(props.data);
 
     let totalExpense = 0;
@@ -119,7 +118,7 @@ function Expenses(props) {
                 options={chartOptions}
             />
 
-            <ListTransactions />
+            <ListTransactions data={listData} />
 
         </Container >
     );

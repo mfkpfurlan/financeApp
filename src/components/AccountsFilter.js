@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Container, Button, Card, CardGroup, ListGroup, ListGroupItem } from 'react-bootstrap';
+import ListTransactions from './ListTransactions';
 
 function AccountsFilter(props) {
 
     const [listData, setListData] = useState(props.data);
+
+    const [filter, setFilter] = useState(props.filter);
 
     let balNu = 0;
     let balBb = 0;
@@ -40,7 +43,15 @@ function AccountsFilter(props) {
     return (
         <Container>
             <CardGroup>
-                <Button variant="primary" size="lg" block>{totalBalance}</Button>
+
+                <Button
+                    variant="primary"
+                    size="lg"
+                    onClick={(e) => setFilter("All")}
+                    block>
+                    {totalBalance}
+                </Button>
+
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src="" />
                     <Card.Body>
@@ -48,7 +59,7 @@ function AccountsFilter(props) {
                         <Card.Text>R${balNu}</Card.Text>
                     </Card.Body>
                     <Card.Body>
-                        <Card.Link href="#">SOME LINK</Card.Link>
+                        <Button onClick={(e) => setFilter("Nu")}>Nu</Button>
                         <Card.Link href="#">SOME LINK</Card.Link>
                     </Card.Body>
                 </Card>
@@ -60,19 +71,7 @@ function AccountsFilter(props) {
                         <Card.Text>R${balBb}</Card.Text>
                     </Card.Body>
                     <Card.Body>
-                        <Card.Link href="#">SOME LINK</Card.Link>
-                        <Card.Link href="#">SOME LINK</Card.Link>
-                    </Card.Body>
-                </Card>
-
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="" />
-                    <Card.Body>
-                        <Card.Title>ACC NAME</Card.Title>
-                        <Card.Text>ACC BALANCE</Card.Text>
-                    </Card.Body>
-                    <Card.Body>
-                        <Card.Link href="#">SOME LINK</Card.Link>
+                        <Button onClick={(e) => setFilter("BB")}>BB</Button>
                         <Card.Link href="#">SOME LINK</Card.Link>
                     </Card.Body>
                 </Card>
@@ -84,7 +83,7 @@ function AccountsFilter(props) {
                         <Card.Text>ACC BALANCE</Card.Text>
                     </Card.Body>
                     <Card.Body>
-                        <Card.Link href="#">SOME LINK</Card.Link>
+                        <Card.Link href="#">LINK</Card.Link>
                         <Card.Link href="#">SOME LINK</Card.Link>
                     </Card.Body>
                 </Card>
@@ -96,12 +95,25 @@ function AccountsFilter(props) {
                         <Card.Text>ACC BALANCE</Card.Text>
                     </Card.Body>
                     <Card.Body>
+                        <Card.Link href="#">LINK</Card.Link>
                         <Card.Link href="#">SOME LINK</Card.Link>
+                    </Card.Body>
+                </Card>
+
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="" />
+                    <Card.Body>
+                        <Card.Title>ACC NAME</Card.Title>
+                        <Card.Text>ACC BALANCE</Card.Text>
+                    </Card.Body>
+                    <Card.Body>
+                        <Card.Link href="#">LINK</Card.Link>
                         <Card.Link href="#">SOME LINK</Card.Link>
                     </Card.Body>
                 </Card>
 
             </CardGroup>
+            <ListTransactions data={listData} filter={filter} />
         </Container>
     )
 }
