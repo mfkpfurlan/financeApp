@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
-import FormJson from './Form';
+import FormJson from '../Form';
 import { Bar } from 'react-chartjs-2';
-import MockData from "../mocks/mockData.json";
+
+import './Home.scss';
+
+import MockData from './../../mocks/mockData.json'
 
 function Home(props) {
-    const [listData, setListData] = useState(props.data);
+    const [listData, setListData] = useState(MockData);
 
     const getLiftedData = (data) => {
         setListData([...listData, data]);
@@ -126,8 +129,8 @@ function Home(props) {
         <Container>
             <Bar
                 data={chartData}
-                width={50}
-                height={50}
+                width={40}
+                height={20}
                 options={chartOptions}
             />
             <FormJson liftData={getLiftedData} data={listData} />

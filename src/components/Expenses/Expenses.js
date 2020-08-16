@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Button, Form, Col } from 'react-bootstrap';
-import ListTransactions from './ListTransactions'
+import ListTransactions from '../ListTransactions'
 import { Doughnut } from 'react-chartjs-2';
-import MockData from "../mocks/mockData.json"
+
+import MockData from "../../mocks/mockData.json"
 
 function Expenses(props) {
 
-    const [listData, setListData] = useState(props.data);
+    const [listData, setListData] = useState(MockData);
 
     let totalExpense = 0;
     let groceriesExpense = 0;
@@ -114,7 +115,7 @@ function Expenses(props) {
             <Doughnut
                 data={chartData}
                 width={50}
-                height={50}
+                height={20}
                 options={chartOptions}
             />
 

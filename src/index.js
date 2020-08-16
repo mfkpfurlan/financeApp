@@ -2,28 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Header from './components/Header';
-import Home from './components/Home';
-import Accounts from './components/Accounts';
-import Expenses from './components/Expenses';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import Accounts from './components/Accounts/Accounts';
+import Expenses from './components/Expenses/Expenses';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
     {/* DATA WORKS */}
-    <App />
+    {/* <App /> */}
     {/* DATA WORKS */}
 
     {/* WORKS WITH ROUTER */}
-    {/* <Header />
+    /* <Header />
     <BrowserRouter>
       <Switch>
         <Route path="/" exact={true} component={Home} />
         <Route path="/accounts" component={Accounts} />
         <Route path="/expenses" component={Expenses} />
       </Switch>
-    </ BrowserRouter> */}
+    </ BrowserRouter> */
     {/* WORKS WITH ROUTER */}
   </React.StrictMode>,
   document.getElementById('root')

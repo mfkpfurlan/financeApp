@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Container, Button, Card, CardGroup, ListGroup, ListGroupItem } from 'react-bootstrap';
-import ListTransactions from './ListTransactions';
+import ListTransactions from '../ListTransactions';
 
-function AccountsFilter(props) {
+import MockData from '../../mocks/mockData.json'
 
-    const [listData, setListData] = useState(props.data);
+function Accounts(props) {
+
+    const [listData, setListData] = useState(MockData);
 
     const [filter, setFilter] = useState(props.filter);
 
@@ -79,11 +81,11 @@ function AccountsFilter(props) {
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src="" />
                     <Card.Body>
-                        <Card.Title>ACC NAME</Card.Title>
+                        <Card.Title>XP</Card.Title>
                         <Card.Text>ACC BALANCE</Card.Text>
                     </Card.Body>
                     <Card.Body>
-                        <Card.Link href="#">LINK</Card.Link>
+                        <Button onClick={(e) => setFilter("XP")}>BB</Button>
                         <Card.Link href="#">SOME LINK</Card.Link>
                     </Card.Body>
                 </Card>
@@ -91,11 +93,11 @@ function AccountsFilter(props) {
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src="" />
                     <Card.Body>
-                        <Card.Title>ACC NAME</Card.Title>
+                        <Card.Title>Clear</Card.Title>
                         <Card.Text>ACC BALANCE</Card.Text>
                     </Card.Body>
                     <Card.Body>
-                        <Card.Link href="#">LINK</Card.Link>
+                        <Button onClick={(e) => setFilter("Clear")}>BB</Button>
                         <Card.Link href="#">SOME LINK</Card.Link>
                     </Card.Body>
                 </Card>
@@ -103,11 +105,11 @@ function AccountsFilter(props) {
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src="" />
                     <Card.Body>
-                        <Card.Title>ACC NAME</Card.Title>
+                        <Card.Title>CDI</Card.Title>
                         <Card.Text>ACC BALANCE</Card.Text>
                     </Card.Body>
                     <Card.Body>
-                        <Card.Link href="#">LINK</Card.Link>
+                        <Button onClick={(e) => setFilter("CDI")}>BB</Button>
                         <Card.Link href="#">SOME LINK</Card.Link>
                     </Card.Body>
                 </Card>
@@ -118,4 +120,4 @@ function AccountsFilter(props) {
     )
 }
 
-export default AccountsFilter;
+export default Accounts;
