@@ -5,47 +5,66 @@ import MockData from "../mocks/mockData.json";
 function ListTransactions(props) {
 
     const [listData, setListData] = useState(MockData);
+    const [account, setAccount] = useState("All");
+    const [operation, setOperation] = useState("All");
 
-    const FilterData = () => {
+    let tempData = {};
+
+    // useEffect(() => {
+    //     FilterDataByAccount(props.filter);
+    // }, [props.filter])
+
+    // useEffect(() => {
+    //     FilterDataByOperation(operation);
+    // }, [operation])
+
+    //hooks are fucking listData.map, i think when it refheshes somehow it becomes null
+
+    function FilterDataByAccount(acc) {
+        tempData = {};
+        listData.map((row, index) => {
+            if (row.source == acc || row.destination == acc) {
+                tempData.push(row);
+            }
+            return tempData;
+        });
+        setListData(tempData);
+    }
+
+    function FilterDataByOperation(op) {
+        tempData = {};
+        listData.map((row, index) => {
+            if (row.operation == op) {
+                tempData.push(row);
+            }
+            return tempData;
+        });
+        setListData(tempData);
+    }
+
+    const ListData = () => {
         let rows;
-        if (props.filter == "All") {
-            rows = listData.map((row, index) => {
-                return (
-                    <tr key={index}>
-                        <td>{row.operation}</td>
-                        <td>{row.source}</td>
-                        <td>{row.destination}</td>
-                        <td>{row.date}</td>
-                        <td>{row.ammount}</td>
-                        <td>{row.category}</td>
-                        <td>{row.description}</td>
-                    </tr>
-                );
-            });
-        } else {
-            rows = listData.map((row, index) => {
-                if (row.source == props.filter || row.destination == props.filter) {
-                    return (
-                        <tr key={index}>
-                            <td>{row.operation}</td>
-                            <td>{row.source}</td>
-                            <td>{row.destination}</td>
-                            <td>{row.date}</td>
-                            <td>{row.ammount}</td>
-                            <td>{row.category}</td>
-                            <td>{row.description}</td>
-                        </tr>
-                    );
-                }
-            });
-        }
-
+        rows = listData.map((row, index) => {
+            return (
+                <tr key={index}>
+                    <td>{row.operation}</td>
+                    <td>{row.source}</td>
+                    <td>{row.destination}</td>
+                    <td>{row.date}</td>
+                    <td>{row.ammount}</td>
+                    <td>{row.category}</td>
+                    <td>{row.description}</td>
+                </tr>
+            );
+        });
         return (
             <tbody>
                 {rows}
             </tbody>
         )
     }
+
+
 
     return (
         <Container>
@@ -61,7 +80,7 @@ function ListTransactions(props) {
                         <th>description</th>
                     </tr>
                 </thead>
-                <FilterData />
+                <ListData />
             </Table>
         </Container>
     );

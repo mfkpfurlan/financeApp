@@ -60,10 +60,6 @@ function Accounts(props) {
                         <Card.Title>Nubank</Card.Title>
                         <Card.Text>R${balNu}</Card.Text>
                     </Card.Body>
-                    <Card.Body>
-                        <Button onClick={(e) => setFilter("Nu")}>Nu</Button>
-                        <Card.Link href="#">SOME LINK</Card.Link>
-                    </Card.Body>
                 </Card>
 
                 <Card style={{ width: '18rem' }}>
@@ -71,10 +67,6 @@ function Accounts(props) {
                     <Card.Body>
                         <Card.Title>Banco do Brasil</Card.Title>
                         <Card.Text>R${balBb}</Card.Text>
-                    </Card.Body>
-                    <Card.Body>
-                        <Button onClick={(e) => setFilter("BB")}>BB</Button>
-                        <Card.Link href="#">SOME LINK</Card.Link>
                     </Card.Body>
                 </Card>
 
@@ -84,10 +76,6 @@ function Accounts(props) {
                         <Card.Title>XP</Card.Title>
                         <Card.Text>ACC BALANCE</Card.Text>
                     </Card.Body>
-                    <Card.Body>
-                        <Button onClick={(e) => setFilter("XP")}>BB</Button>
-                        <Card.Link href="#">SOME LINK</Card.Link>
-                    </Card.Body>
                 </Card>
 
                 <Card style={{ width: '18rem' }}>
@@ -95,10 +83,6 @@ function Accounts(props) {
                     <Card.Body>
                         <Card.Title>Clear</Card.Title>
                         <Card.Text>ACC BALANCE</Card.Text>
-                    </Card.Body>
-                    <Card.Body>
-                        <Button onClick={(e) => setFilter("Clear")}>BB</Button>
-                        <Card.Link href="#">SOME LINK</Card.Link>
                     </Card.Body>
                 </Card>
 
@@ -108,14 +92,10 @@ function Accounts(props) {
                         <Card.Title>CDI</Card.Title>
                         <Card.Text>ACC BALANCE</Card.Text>
                     </Card.Body>
-                    <Card.Body>
-                        <Button onClick={(e) => setFilter("CDI")}>BB</Button>
-                        <Card.Link href="#">SOME LINK</Card.Link>
-                    </Card.Body>
                 </Card>
 
             </CardGroup>
-            <ListTransactions data={listData} filter={filter} />
+            <ListTransactions filter={filter} />
         </Container>
     )
 }
