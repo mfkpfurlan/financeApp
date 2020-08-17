@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import FormJson from '../Form';
 import { Bar } from 'react-chartjs-2';
 
-import './Home.scss';
+import * as style from './Home.scss';
 
 import MockData from './../../mocks/mockData.json'
 

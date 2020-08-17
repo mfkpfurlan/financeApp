@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import logo from './../../logo.svg';
 
-import './Header.scss';
+import * as style from './Header.scss';
 
 function Header() {
     return (
@@ -19,7 +19,7 @@ function Header() {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
+                    <Nav>
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/accounts">Accounts</Nav.Link>
                         <Nav.Link href="/expenses">Expenses</Nav.Link>
